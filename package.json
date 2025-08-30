@@ -1,8 +1,8 @@
 {
-  "name": "samrtstudy-frontend",
+  "name": "smartstudy-frontend",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://samrtstudy.github.io/samrtstudy-frontend-Check",
+  "homepage": "https://codebydj.github.io/smartstudy-frontend-Check",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^7.0.0",
     "@fortawesome/free-regular-svg-icons": "^7.0.0",
