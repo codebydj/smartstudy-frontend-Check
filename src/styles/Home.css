@@ -1,0 +1,16 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  margin: 50px;
+  gap: 50px;
+}
+.header-logo {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  width: clamp(130px, 50%, 400px);
+  height: auto;
+  user-select: none;
+}

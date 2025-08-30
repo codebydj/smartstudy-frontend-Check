@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Capriola&family=Cinzel+Decorative:wght@400;700;900&family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Encode+Sans:wght@100..900&family=Graduate&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+.logo-container > img {
+  width: 350px;
+}
+.FileCard,
+.project-card-details {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 31px;
+}
+.FileCard {
+  max-width: 500px;
+  max-height: 400px;
+  padding: 30px;
+  border: 1px solid #0000001a;
+  border-radius: 6px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  gap: 30px;
+}
+.project-card-header {
+  margin-top: -15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 11px;
+}
+.PCLogo {
+  width: 30px;
+  background-color: #dcf3f3;
+  padding: 10px;
+  border-radius: 14px;
+  user-select: none;
+}
+.PCHeader {
+  text-align: center;
+  font-weight: 800;
+  font-size: clamp(15px, 2vw, 28px);
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  word-spacing: 5px;
+}
+.PCContent {
+  width: 90%;
+  text-align: center;
+  font-size: clamp(8px, 2vw, 13px);
+  word-spacing: 5px;
+  color: #7c7c7c;
+}
+.Branch-data,
+.semester-data {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  font-family: "Capriola", sans-serif;
+  font-weight: 400;
+  font-size: clamp(13px, 2vw, 16px);
+  gap: 10px;
+}
+select {
+  width: 100%;
+  max-height: 40px;
+  min-height: 30px;
+  border-radius: 5px;
+  font-size: clamp(10px, 2vw, 12px);
+  border: hsla(0, 0%, 0%, 0.239) 2.3px solid;
+  outline: none;
+  text-overflow: ellipsis;
+}
+select:first-child {
+  color: #000000;
+}
+option {
+  width: 10px;
+  text-overflow: ellipsis;
+  transition: all 1.3s ease;
+  border-radius: 4px;
+  background-color: #e5ff55;
+}
+.getSubButton {
+  display: inline-block;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+  will-change: box-shadow, transform;
+  background: radial-gradient(100% 100% at 100% 0%, #89e5ff 0%, #5468ff 100%);
+  background: linear-gradient(to right, #2a6cfc, #a439ff);
+  padding: 0 2em;
+  border-radius: 0.3em;
+  color: #fff;
+  height: 2.6em;
+  text-shadow: 0 1px 0 rgb(0 0 0 / 40%);
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.getSubButton:active {
+  transform: translateY(0.1em);
+}
+.getSubButton {
+  color: #dcf3f3;
+  text-decoration: none;
+}
+.project-card-submit-button {
+  display: flex;
+  justify-content: center;
+}
+@media screen and (max-width: 368px) {
+  .getSubButton {
+    font-size: 10px;
+  }
+}
