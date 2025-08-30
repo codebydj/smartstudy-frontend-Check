@@ -1,4 +1,19 @@
-.BackButton{
-    margin-top: 2%;
-    margin-left: 10%;
+.BackButton {
+  margin-top: 4%;
+  margin-left: 10%;
+}
+.back-btn {
+  display: inline-block;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+  will-change: box-shadow, transform;
+  background: radial-gradient(100% 100% at 100% 0%, #89e5ff 0%, #5468ff 100%);
+  background: linear-gradient(to right, #2a6cfc, #a439ff);
+  padding: 0 2em;
+  border-radius: 0.3em;
+  color: #fff;
+  height: 2.6em;
+  text-shadow: 0 1px 0 rgb(0 0 0 / 40%);
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
 }
