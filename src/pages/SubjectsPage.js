@@ -23,7 +23,10 @@ function SubjectsPage() {
   return (
     <div>
       <BackButton />
-      <LocationPath />
+      <LocationPath
+        paths={[{ name: "Home", link: "/" }, { name: "Subjects" }]}
+      />
+
       <div className="subjects-page">
         <h2 className="subjects-page-title">
           Subjects for {branch} - Semester {semester}

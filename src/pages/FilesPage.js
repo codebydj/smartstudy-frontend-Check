@@ -19,7 +19,8 @@ function FilesPage() {
   return (
     <div>
       <BackButton />
-      <LocationPath />
+     <LocationPath paths={[{ name: "Subjects", link: `/subjects?branch=${branch}&semester=${semester}` }, { name: subject }]} />
+
 
       <div className="files-page">
         <h2 className="files-page-title">
