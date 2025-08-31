@@ -4,6 +4,8 @@ import React from "react";
 import { useLocation } from "react-router-dom";
 import { filesData } from "../data/FilesData";
 import BackButton from "../components/BackButton";
+import { Link } from "react-router-dom";
+import LocationPath from "../components/LocationPath";
 import "../styles/FilesPage.css";
 
 function FilesPage() {
@@ -18,6 +20,8 @@ function FilesPage() {
   return (
     <div>
       <BackButton />
+      <LocationPath />
+
       <div className="files-page">
         <h2 className="files-page-title">
           Files for {subject} ({branch} - Semester {semester})

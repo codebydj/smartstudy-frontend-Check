@@ -1,10 +1,10 @@
-// File: src/pages/SubjectsPage.js
-
 import React from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import subjectsData from "../data/SubjectsData";
 import BackButton from "../components/BackButton";
-import "../styles/SubjectsPage.css"; // Import CSS
+import { Link } from "react-router-dom";
+import LocationPath from "../components/LocationPath";
+import "../styles/SubjectsPage.css";
 
 function SubjectsPage() {
   const location = useLocation();
@@ -24,13 +24,14 @@ function SubjectsPage() {
   return (
     <div>
       <BackButton />
-        <div className="subjects-page">
-          <h2 className="subjects-page-title">
+      <LocationPath />
+      <div className="subjects-page">
+        <h2 className="subjects-page-title">
           Subjects for {branch} - Semester {semester}
         </h2>
-          <div className="subjects-container">
-            {subjects.length > 0 ? (
-              subjects.map((subject, index) => (
+        <div className="subjects-container">
+          {subjects.length > 0 ? (
+            subjects.map((subject, index) => (
               <div className="subject-card" key={index}>
                 <img
                   src={subject.icon}

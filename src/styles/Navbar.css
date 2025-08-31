@@ -150,8 +150,7 @@
   .logo-image {
     width: 120px;
   }
-  .menu-icon,
-  .close-icon {
+  .menu-icon,.close-icon{
     top: 30px;
     /* width: 15px; */
   }
