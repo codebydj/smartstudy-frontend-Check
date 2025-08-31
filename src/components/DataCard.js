@@ -42,13 +42,14 @@ export default function DataCard() {
             <option value="" disabled>
               Select a branch
             </option>
-            <option value="CIV">Civil Engineering (CIV)</option>
             <option value="CSE">Computer Science Engineering (CSE)</option>
+
+            {/* <option value="CIV">Civil Engineering (CIV)</option>
             <option value="CSEAI">Computer Science Engineering (CSE-AI)</option>
             <option value="ECE">
               Electronics & Communication Engineering (ECE)
             </option>
-            <option value="ME">Mechanical Engineering (ME)</option>
+            <option value="ME">Mechanical Engineering (ME)</option> */}
           </select>
         </div>
 
@@ -63,13 +64,13 @@ export default function DataCard() {
             <option value="" disabled>
               Select a semester
             </option>
-            <option value="1-1">Year 1 - Sem 1</option>
+            {/* <option value="1-1">Year 1 - Sem 1</option>
             <option value="1-2">Year 1 - Sem 2</option>
             <option value="2-1">Year 2 - Sem 1</option>
-            <option value="2-2">Year 2 - Sem 2</option>
+            <option value="2-2">Year 2 - Sem 2</option> */}
             <option value="3-1">Year 3 - Sem 1</option>
-            <option value="3-2">Year 3 - Sem 2</option>
-            <option value="4-1">Year 4 - Sem 1</option>
+            {/* <option value="3-2">Year 3 - Sem 2</option>
+            <option value="4-1">Year 4 - Sem 1</option> */}
           </select>
         </div>
       </div>

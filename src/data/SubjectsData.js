@@ -22,6 +22,13 @@ export const SubjectsData = {
       { icon: "/assets/math-icon.png", name: "Mathematics II", totalFiles: 6 },
     ],
     // ...add semesters 2-1 to 4-1 similarly
+    "3-1": [
+      { icon: "", name: "DW Data Mining", totalFiles: "" },
+      { icon: "", name: "Computer Network", totalFiles: "" },
+      { icon: "", name: "FLAT", totalFiles: "" },
+      { icon: "", name: "Artificial Intelligence", totalFiles: "" },
+      { icon: "", name: "Entreprenuership Development", totalFiles: "" },
+    ],
   },
   ECE: {
     "1-1": [

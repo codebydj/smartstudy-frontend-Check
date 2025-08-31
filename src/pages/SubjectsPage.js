@@ -3,6 +3,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import subjectsData from "../data/SubjectsData";
 import BackButton from "../components/BackButton";
 import LocationPath from "../components/LocationPath";
+import subjectIcon from '../assets/bookmark-icon.png';
 import "../styles/SubjectsPage.css";
 
 function SubjectsPage() {
@@ -41,14 +42,14 @@ function SubjectsPage() {
             subjects.map((subject, index) => (
               <div className="subject-card" key={index}>
                 <img
-                  src={subject.icon}
+                  src={subjectIcon}
                   alt={subject.name}
                   className="subject-icon"
                 />
                 <h3 className="subject-name">{subject.name}</h3>
-                <p className="subject-files">
+                {/* <p className="subject-files">
                   Total Files: {subject.totalFiles}
-                </p>
+                </p> */}
                 <button
                   className="view-files-btn"
                   onClick={() => handleViewFiles(subject.name)}>
@@ -57,7 +58,7 @@ function SubjectsPage() {
               </div>
             ))
           ) : (
-            <p className="no-subjects">No subjects found for this selection.</p>
+            <p className="no-subjects">No subjects found for this selection. will upadted soon</p>
           )}
         </div>
       </div>

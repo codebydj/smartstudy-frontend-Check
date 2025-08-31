@@ -33,6 +33,7 @@ function App() {
         <Route path="/downloading" element={<Downloading />} />
       </Routes>
       <Footer />
+      
     </Router>
   );
 }

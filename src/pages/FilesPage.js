@@ -1,11 +1,9 @@
 // File: src/pages/FilesPage.js
-
 import React from "react";
 import { useLocation } from "react-router-dom";
-import { filesData } from "../data/FilesData";
+import filesData from "../data/FilesData";
 import BackButton from "../components/BackButton";
 import LocationPath from "../components/LocationPath";
-import { Link } from "react-router-dom";
 import "../styles/FilesPage.css";
 
 function FilesPage() {
@@ -17,6 +15,19 @@ function FilesPage() {
 
   const files = filesData[branch]?.[semester]?.[subject] || [];
 
+  // ✅ Utility function: Convert Google Drive "view" link → direct download
+  const getDownloadLink = (url) => {
+    if (!url) return "#";
+
+    // Matches "file/d/FILE_ID/view"
+    const match = url.match(/\/d\/(.*?)\//);
+    if (match && match[1]) {
+      return `https://drive.google.com/uc?export=download&id=${match[1]}`;
+    }
+
+    return url; // fallback if it's already a direct link
+  };
+
   return (
     <div>
       <BackButton />
@@ -26,9 +37,10 @@ function FilesPage() {
           { name: branch },
           { name: semester },
           {
-            name: subject,
+            name: "Subjects",
             link: `/subject-files?branch=${branch}&semester=${semester}`,
           },
+          { name: subject },
           { name: `Files (${files.length})` },
         ]}
       />
@@ -48,12 +60,24 @@ function FilesPage() {
                   <span>Pages: {file.pages}</span>
                 </div>
                 <div className="file-actions">
-                  <button className="view-btn">
-                    <Link to="/downloading">View</Link>
-                  </button>
-                  <button className="download-btn">
-                    <Link to="/downloading">Download</Link>{" "}
-                  </button>
+                  {/* ✅ View button (opens in new tab) */}
+                  <a
+                    href={file.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="view-btn"
+                  >
+                    View
+                  </a>
+
+                  {/* ✅ Download button (Google Drive direct link) */}
+                  <a
+                    href={getDownloadLink(file.url)}
+                    className="download-btn"
+                    download
+                  >
+                    Download
+                  </a>
                 </div>
               </div>
             ))
