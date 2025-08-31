@@ -2,7 +2,6 @@ import React from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import subjectsData from "../data/SubjectsData";
 import BackButton from "../components/BackButton";
-import { Link } from "react-router-dom";
 import LocationPath from "../components/LocationPath";
 import "../styles/SubjectsPage.css";
 

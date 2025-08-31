@@ -4,7 +4,6 @@ import React from "react";
 import { useLocation } from "react-router-dom";
 import { filesData } from "../data/FilesData";
 import BackButton from "../components/BackButton";
-import { Link } from "react-router-dom";
 import LocationPath from "../components/LocationPath";
 import "../styles/FilesPage.css";
 
