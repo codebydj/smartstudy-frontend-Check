@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/smartstudy-frontend-Check/static/css/main.8f376e82.css",
-    "main.js": "/smartstudy-frontend-Check/static/js/main.d092d701.js",
+    "main.js": "/smartstudy-frontend-Check/static/js/main.c76c4398.js",
     "static/js/900.a1499ca4.chunk.js": "/smartstudy-frontend-Check/static/js/900.a1499ca4.chunk.js",
     "static/media/smartstudy-header.png": "/smartstudy-frontend-Check/static/media/smartstudy-header.8eb17b7f1a8299cbbf1f.png",
     "static/media/smartstudy-logo.png": "/smartstudy-frontend-Check/static/media/smartstudy-logo.5de03730d151f831a3fa.png",
@@ -10,10 +10,10 @@
     "static/media/about-icon.png": "/smartstudy-frontend-Check/static/media/about-icon.95cabd95e25a393a64df.png",
     "index.html": "/smartstudy-frontend-Check/index.html",
     "main.8f376e82.css.map": "/smartstudy-frontend-Check/static/css/main.8f376e82.css.map",
-    "main.d092d701.js.map": "/smartstudy-frontend-Check/static/js/main.d092d701.js.map"
+    "main.c76c4398.js.map": "/smartstudy-frontend-Check/static/js/main.c76c4398.js.map"
   },
   "entrypoints": [
     "static/css/main.8f376e82.css",
-    "static/js/main.d092d701.js"
+    "static/js/main.c76c4398.js"
   ]
 }

@@ -1,11 +1,14 @@
 .locationPath {
   display: flex;
   flex-direction: row;
+  align-items: center;
   gap: 3px;
+  margin-top: 10px;
   margin-left: 20%;
   flex-wrap: wrap;
   cursor: default;
 }
+
 .locationPath,
 .locationPath > a {
   font-size: 15px;
@@ -13,23 +16,33 @@
   font-weight: 700;
   color: #393939;
 }
+
 .locationPath > a {
   display: flex;
   flex-direction: row;
   gap: 5px;
-  align-items: center;
   text-decoration: none;
   color: black;
 }
+
 .locationPath > a > img {
   width: 15px;
 }
-.locationPath>p{
+
+.locationPath > p {
   flex-wrap: wrap;
   display: flex;
   flex-direction: row;
   letter-spacing: 4px;
 }
-.locationPath>P:last-child{
+
+.locationPath > p:last-child {
   color: rgb(42, 85, 242);
+}
+.home-icon {
+  width: 20px;
+}
+
+.home-icon:hover {
+  transform: scale(1.1); /* Slight zoom effect */
 }

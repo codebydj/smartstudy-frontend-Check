@@ -7,7 +7,7 @@ import "../styles/LocationPath.css";
 
 function LocationPath({ paths = [] }) {
   return (
-    <div className="location-path">
+    <div className="locationPath">
       {/* Home icon always links to root */}
       <Link to="/">
         <img src={home} alt="Home" className="home-icon" />

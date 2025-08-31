@@ -14,6 +14,7 @@ import About from "./pages/AboutUs";
 import SubjectFiles from "./pages/SubjectsPage";
 import FilesPage from "./pages/FilesPage";
 import Footer from "./components/Footer";
+import Downloading from "./components/Downloading";
 import "./App.css"
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
         <Route path="*" element={<Navigate to="/" />} />
         <Route path="/subject-files" element={<SubjectFiles />} />
         <Route path="/files" element={<FilesPage />} />
+        <Route path="/downloading" element={<Downloading />} />
       </Routes>
       <Footer />
     </Router>

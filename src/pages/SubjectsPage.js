@@ -24,7 +24,12 @@ function SubjectsPage() {
     <div>
       <BackButton />
       <LocationPath
-        paths={[{ name: "Home", link: "/" }, { name: "Subjects" }]}
+        paths={[
+          { name: "Home", link: "/" },
+          { name: branch },
+          { name: semester },
+          { name: `Subject's  (${subjects.length})` },
+        ]}
       />
 
       <div className="subjects-page">

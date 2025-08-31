@@ -42,13 +42,17 @@
   cursor: pointer;
 }
 
-.view-btn {
-  background-color: #2A6CFC;
+.view-btn,
+.view-btn > a {
+  text-decoration: none;
+  background-color: #2a6cfc;
   color: white;
 }
 
-.download-btn {
-  background-color: #00A63E;
+.download-btn,
+.download-btn > a {
+  text-decoration: none;
+  background-color: #00a63e;
   color: white;
 }
 

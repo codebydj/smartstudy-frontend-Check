@@ -5,6 +5,7 @@ import { useLocation } from "react-router-dom";
 import { filesData } from "../data/FilesData";
 import BackButton from "../components/BackButton";
 import LocationPath from "../components/LocationPath";
+import { Link } from "react-router-dom";
 import "../styles/FilesPage.css";
 
 function FilesPage() {
@@ -19,8 +20,18 @@ function FilesPage() {
   return (
     <div>
       <BackButton />
-     <LocationPath paths={[{ name: "Subjects", link: `/subjects?branch=${branch}&semester=${semester}` }, { name: subject }]} />
-
+      <LocationPath
+        paths={[
+          { name: "Home", link: "/" },
+          { name: branch },
+          { name: semester },
+          {
+            name: subject,
+            link: `/subject-files?branch=${branch}&semester=${semester}`,
+          },
+          { name: `Files (${files.length})` },
+        ]}
+      />
 
       <div className="files-page">
         <h2 className="files-page-title">
@@ -37,8 +48,12 @@ function FilesPage() {
                   <span>Pages: {file.pages}</span>
                 </div>
                 <div className="file-actions">
-                  <button className="view-btn">View</button>
-                  <button className="download-btn">Download</button>
+                  <button className="view-btn">
+                    <Link to="/downloading">View</Link>
+                  </button>
+                  <button className="download-btn">
+                    <Link to="/downloading">Download</Link>{" "}
+                  </button>
                 </div>
               </div>
             ))
