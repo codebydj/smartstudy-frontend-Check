@@ -1,0 +1,142 @@
+.upload-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10%;
+  justify-content: center;
+
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+.upload-form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  justify-content: center;
+}
+.input {
+  width: 320px;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1.5px solid rgb(101, 99, 99);
+  outline: none;
+  transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+  box-shadow: 0px 0px 20px -18px;
+}
+
+.input:hover {
+  border: 2px solid lightgrey;
+  box-shadow: 0px 0px 20px -17px;
+}
+
+.input:active {
+  transform: scale(0.95);
+}
+
+.input:focus {
+  border: 2px solid grey;
+}
+
+.DataInputDiv {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+}
+.DataInputDiv > label {
+  font-weight: bold;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.upload-btn-wrapper {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn {
+  border: none;
+  background: #4caf50; /* green */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: 0.3s;
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.btn:hover {
+  background: #45a049; /* darker green */
+}
+
+.upload-btn-wrapper input[type="file"] {
+  font-size: 100px; /* make it big so it covers button */
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0; /* invisible */
+  cursor: pointer;
+}
+
+.uploadImg {
+  width: 23px;
+  filter: invert(1);
+}
+/* From Uiverse.io by cssbuttons-io */
+.UploadButton {
+  margin-top: 40px;
+  font-family: inherit;
+  display: inline-block;
+  width: 8em;
+  height: 2.6em;
+  line-height: 2.5em;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  transition: color 0.5s;
+  z-index: 1;
+  font-size: 17px;
+  border-radius: 6px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  border: 2px solid #3369e7;
+}
+
+.UploadButton:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background: linear-gradient(to right, #2a6cfc, #a439ff);
+
+  height: 150px;
+  width: 200px;
+  border-radius: 50%;
+}
+
+.UploadButton:hover {
+  color: #fff;
+}
+
+.UploadButton:before {
+  top: 100%;
+  left: 100%;
+  transition: all 0.7s;
+}
+
+.UploadButton:hover:before {
+  top: -30px;
+  left: -30px;
+}
+
+.UploadButton:active:before {
+  background: linear-gradient(to right, #2a6cfc, #a439ff);
+  transition: background 0s;
+}

@@ -8,6 +8,7 @@ export default function Home() {
     <div className="home">
       <img src={HeaderLogo} alt="SmartStudy Logo" className="header-logo" />
       <DataCard />
+      <div className="lastUpdated">Last Updated: 10-9-2025</div>
     </div>
   );
 }

@@ -4,6 +4,11 @@ import { useLocation } from "react-router-dom";
 import filesData from "../data/FilesData";
 import BackButton from "../components/BackButton";
 import LocationPath from "../components/LocationPath";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faDatabase,
+  faFile,
+} from "@fortawesome/free-solid-svg-icons";
 import "../styles/FilesPage.css";
 
 function FilesPage() {
@@ -56,8 +61,20 @@ function FilesPage() {
               <div className="file-card" key={index}>
                 <div className="file-name">{file.name}</div>
                 <div className="file-details">
-                  <span>Size: {file.size}</span>
-                  <span>Pages: {file.pages}</span>
+                  <span>
+                    <FontAwesomeIcon
+                      icon={faDatabase}
+                      style={{ color: "#717182", marginRight: "5px" }}
+                    />
+                    {file.size}
+                  </span>
+                  <span>
+                    <FontAwesomeIcon
+                      icon={faFile}
+                      style={{ color: "#717182", marginRight: "5px" }}
+                    />
+                    {file.pages} Pages
+                  </span>
                 </div>
                 <div className="file-actions">
                   {/* ✅ View button (opens in new tab) */}
@@ -65,8 +82,7 @@ function FilesPage() {
                     href={file.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="view-btn"
-                  >
+                    className="view-btn">
                     View
                   </a>
 
@@ -74,8 +90,7 @@ function FilesPage() {
                   <a
                     href={getDownloadLink(file.url)}
                     className="download-btn"
-                    download
-                  >
+                    download>
                     Download
                   </a>
                 </div>

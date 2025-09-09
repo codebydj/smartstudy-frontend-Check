@@ -1,56 +1,49 @@
 export const SubjectsData = {
   CSE: {
     "1-1": [
-      { icon: "/assets/math-icon.png", name: "Mathematics I", totalFiles: 5 },
-      { icon: "/assets/physics-icon.png", name: "Physics", totalFiles: 3 },
+      { icon: "/assets/math-icon.png", name: "Mathematics I" },
+      { icon: "/assets/physics-icon.png", name: "Physics" },
       {
         icon: "/assets/programming-icon.png",
         name: "Programming Basics",
-        totalFiles: 4,
       },
     ],
     "1-2": [
-      { icon: "/assets/math-icon.png", name: "Mathematics II", totalFiles: 6 },
-      { icon: "/assets/data-icon.png", name: "Data Structures", totalFiles: 5 },
+      { icon: "/assets/math-icon.png", name: "Mathematics II" },
+      { icon: "/assets/data-icon.png", name: "Data Structures" },
       {
         icon: "/assets/digital-icon.png",
         name: "Digital Logic",
-        totalFiles: 2,
       },
     ],
-    "2-1": [
-      { icon: "/assets/math-icon.png", name: "Mathematics II", totalFiles: 6 },
-    ],
+    "2-1": [{ icon: "/assets/math-icon.png", name: "Mathematics II" }],
     // ...add semesters 2-1 to 4-1 similarly
     "3-1": [
-      { icon: "", name: "DW Data Mining", totalFiles: "" },
-      { icon: "", name: "Computer Network", totalFiles: "" },
-      { icon: "", name: "FLAT", totalFiles: "" },
-      { icon: "", name: "Artificial Intelligence", totalFiles: "" },
-      { icon: "", name: "Entreprenuership Development", totalFiles: "" },
+      { icon: "", name: "DW Data Mining" },
+      { icon: "", name: "Computer Network" },
+      { icon: "", name: "FLAT" },
+      { icon: "", name: "Artificial Intelligence" },
+      { icon: "", name: "Entreprenuership Development" },
     ],
   },
   ECE: {
     "1-1": [
-      { icon: "/assets/math-icon.png", name: "Mathematics I", totalFiles: 4 },
-      { icon: "/assets/physics-icon.png", name: "Physics", totalFiles: 3 },
+      { icon: "/assets/math-icon.png", name: "Mathematics I" },
+      { icon: "/assets/physics-icon.png", name: "Physics" },
       {
         icon: "/assets/electronics-icon.png",
         name: "Basic Electronics",
-        totalFiles: 5,
       },
     ],
     "1-2": [
-      { icon: "/assets/math-icon.png", name: "Mathematics II", totalFiles: 6 },
+      { icon: "/assets/math-icon.png", name: "Mathematics II" },
       {
         icon: "/assets/signals-icon.png",
         name: "Signals & Systems",
-        totalFiles: 4,
       },
       {
         icon: "/assets/circuit-icon.png",
         name: "Circuit Theory",
-        totalFiles: 3,
       },
     ],
     // ...add remaining semesters

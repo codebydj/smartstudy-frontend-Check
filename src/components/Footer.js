@@ -4,9 +4,18 @@ import {
   faEnvelope,
   faPhone,
   faLocationDot,
+  faBook,
+  faList,
+  faUser,
+  faInbox,
 } from "@fortawesome/free-solid-svg-icons";
-import { faHeart, faCopyright } from "@fortawesome/free-regular-svg-icons";
+import {
+  faHeart,
+  faCopyright,
+  faAddressBook,
+} from "@fortawesome/free-regular-svg-icons";
 import "../styles/Footer.css";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
@@ -24,6 +33,13 @@ function Footer() {
           <h1 className="heading">Contact Us</h1>
           <div>
             <FontAwesomeIcon
+              icon={faUser}
+              style={{ color: "#6bbe66", marginRight: "5px" }}
+            />
+            <span className="paragraph userList">DJ , charan</span>
+          </div>
+          <div>
+            <FontAwesomeIcon
               icon={faEnvelope}
               style={{ color: "#0000ff", marginRight: "5px" }}
             />
@@ -34,24 +50,50 @@ function Footer() {
               icon={faPhone}
               style={{ color: "#00ff00", marginRight: "5px" }}
             />
-            <span className="paragraph">+9123456788</span>
+            <span className="paragraph">+919876543210</span>
           </div>
           <div>
             <FontAwesomeIcon
               icon={faLocationDot}
               style={{ color: "#ff0000", marginRight: "5px" }}
             />
-            <span className="paragraph">123 education st, learning city</span>
+            <span className="paragraph">MVR r23 cse-c students</span>
           </div>
         </div>
 
         <div>
           <h1 className="heading">Quick Links</h1>
-          <div>
-            <p className="paragraph Footer_nav_link">About Us</p>
-            <p className="paragraph Footer_nav_link">Privacy Policy</p>
-            <p className="paragraph Footer_nav_link">Terms of Service</p>
-            <p className="paragraph Footer_nav_link">Help Center</p>
+          <div className="QuickLink">
+            <Link to="/" className="paragraph Footer_nav_link">
+              {" "}
+              <FontAwesomeIcon
+                icon={faAddressBook}
+                style={{ color: "#6bbe66", marginRight: "5px" }}
+              />
+              About Us
+            </Link>
+            <Link to="/" className="paragraph Footer_nav_link">
+              {" "}
+              <FontAwesomeIcon
+                icon={faBook}
+                style={{ color: "#0000ff", marginRight: "5px" }}
+              />
+              Privacy Policy
+            </Link>
+            <Link to="/" className="paragraph Footer_nav_link">
+              <FontAwesomeIcon
+                icon={faList}
+                style={{ color: "#ff4141", marginRight: "5px" }}
+              />
+              Terms of Service
+            </Link>
+            <Link to="/" className="paragraph Footer_nav_link">
+              <FontAwesomeIcon
+                icon={faInbox}
+                style={{ color: "#ed722e", marginRight: "5px" }}
+              />
+              Help Center
+            </Link>
           </div>
         </div>
       </div>

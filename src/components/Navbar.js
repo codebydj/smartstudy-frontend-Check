@@ -54,14 +54,14 @@ function Navbar() {
           </Link>
         </li>
 
-        <li className="loginBtn">
+        <li className="loginBtn LoginRegisterButton">
           <Link to="/login" onClick={() => setMenuOpen(false)}>
-            <img src={loginIcon} alt="" className="navbar-icons" />
+            <img src={loginIcon} alt="" className="navbar-icons " />
             Login
           </Link>
         </li>
 
-        <li className="registerBtn">
+        <li className="registerBtn LoginRegisterButton">
           <Link to="/register" onClick={() => setMenuOpen(false)}>
             <img src={addUserIcon} alt="" className="navbar-icons" />
             Register

@@ -1,0 +1,108 @@
+.RegisterPage {
+  background-image: url("../assets/backgroundImg2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-top: -3.9%;
+  padding-top: 4.9%;
+}
+.RegisterCard {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 10px;
+  max-width: 30%;
+  min-width: 200px;
+  margin: auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  backdrop-filter: blur(7px);
+  margin-top: 30px;
+}
+.RegisterCard div {
+  display: flex;
+  flex-direction: column;
+}
+.RegisterFormCard {
+  width: 90%;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.registerHeading {
+  text-align: center;
+  font-size: 1.6em;
+}
+.registerHeadingCaption {
+  font-size: 0.8em;
+}
+.RegisterImgContainer {
+  background-image: linear-gradient(to right, #0076fa, #9600fa);
+  border-radius: 50px;
+}
+.RegisterImg {
+  filter: brightness(0) invert(1);
+  width: 30px;
+  padding: 10px;
+}
+.RegisterInput {
+  width: 90%;
+  height: 35px;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  border: 1px solid rgb(170, 170, 170);
+  padding-left: 10px;
+  background-color: #f1f1f1;
+}
+.RegisterBranchInput,
+.RegisterSemesterInput {
+  width: 95%;
+}
+.PhoneInput {
+  width: 83%;
+  padding-left: 40px;
+}
+.number91::before {
+  width: 30px;
+  content: "+91";
+  position: relative;
+  top: -30px;
+  left: 10px;
+  font-size: 0.91em;
+}
+.RegisterPassword {
+  margin-top: -20px;
+}
+.RegisterButton {
+  color: white;
+  border-radius: 10px;
+  width: 50%;
+  border: 0px;
+  font-size: 15px;
+  padding: 10px;
+  background-image: linear-gradient(to right, #0076fa, #9600fa);
+  font-weight: BOLD;
+  cursor: pointer;
+}
+
+.AlreadyAccount {
+  text-align: center;
+  display: flex;
+  gap: 9px;
+  font-size: 0.94em;
+  font-family: Segoe UI Emoji;
+  font-weight: bold;
+  color: #364153;
+}
+.AlreadyAccount a {
+  text-decoration: none;
+  color: #276bfb;
+}
+.buttonParent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

@@ -1,0 +1,80 @@
+.LoginPage {
+  background-image: url("../assets/BackgroundImage1.jpg");
+  width: 100vw;
+  background-size: cover;
+  background-position: center;
+  height: 97.9vh;
+  margin-top: -3.9%;
+  padding-top: 4.9%;
+}
+.LoginContainer {
+  width: 100vw;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: default;
+}
+.LoginFormContainer {
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 40px;
+  border-radius: 15px;
+  gap: 20px;
+  backdrop-filter: blur(5px);
+}
+.LoginImgContainer {
+  padding: 10px;
+  background: linear-gradient(to right, #2a6cfc, #a439ff);
+  border-radius: 50px;
+}
+.LoginImg {
+  padding: 2px 4px 0px 0px;
+  user-select: none;
+  width: 30px;
+  filter: brightness(0) invert(1);
+}
+.LoginHeader {
+  font-weight: bolder;
+  font-size: 1.5em;
+  font-family: Segoe UI Emoji;
+  margin-bottom: -10px;
+}
+.LoginHeaderCaption {
+  font-size: 0.88em;
+  color: #4a5565;
+}
+.LoginInputContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-left: -40px;
+}
+.LoginInputContainer div {
+  display: flex;
+  flex-direction: column;
+  align-items: self-start;
+  gap: 3px;
+}
+label {
+  font-size: 0.91em;
+  font-family: Segoe UI Emoji;
+  font-weight: 600;
+  letter-spacing: 0.81px;
+  color: #364153;
+}
+input {
+  width: 100%;
+  max-width: 600px;
+  height: 36px;
+  border-radius: 6.75px;
+  padding: 3px 10px 3px 35px;
+  font-size: 0.9em;
+  border: 1px solid #828282;
+  background-color: #f3f3f5;
+  color: #000;
+}

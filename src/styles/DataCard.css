@@ -11,14 +11,15 @@
   gap: 31px;
 }
 .FileCard {
-  max-width: 500px;
+  max-width: 400px;
   max-height: 400px;
   padding: 30px;
   border: 1px solid #0000001a;
-  border-radius: 6px;
+  border-radius: 16px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
     rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
   gap: 30px;
+
 }
 .project-card-header {
   margin-top: -15px;
@@ -58,27 +59,26 @@
   font-family: "Capriola", sans-serif;
   font-weight: 400;
   font-size: clamp(13px, 2vw, 16px);
-  gap: 10px;
+  gap: 4px;
 }
-select {
-  width: 100%;
+.my-select {
+  width: 95%;
   max-height: 40px;
-  min-height: 30px;
+  min-height: 35px;
   border-radius: 5px;
   font-size: clamp(10px, 2vw, 12px);
   border: hsla(0, 0%, 0%, 0.239) 2.3px solid;
   outline: none;
   text-overflow: ellipsis;
 }
-select:first-child {
+.my-select:first-child {
   color: #000000;
 }
-option {
+.my-select>option {
   width: 10px;
   text-overflow: ellipsis;
   transition: all 1.3s ease;
   border-radius: 4px;
-  background-color: #e5ff55;
 }
 .getSubButton {
   display: inline-block;

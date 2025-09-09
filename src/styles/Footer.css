@@ -6,20 +6,26 @@ footer {
   background-color: #1c2737;
   width: 100%;
   overflow: hidden;
-  font-size: .8em;
+  font-size: 0.8em;
   cursor: default;
   padding-bottom: 10px;
-
 }
 .heading {
- font-size: clamp(12px, 2vw, 20px);
-  color: white;
+  font-size: clamp(12px, 2vw, 20px);
+  color: rgb(174, 216, 255);
+}
+.QuickLink {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 .paragraph {
   color: #f0f0f0;
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: clamp(4px, 1.6vw, 11px);
-
+}
+.userList{
+  text-transform: capitalize;
 }
 .flex {
   width: 100%;
@@ -28,22 +34,26 @@ footer {
   justify-content: space-evenly;
   align-items: start;
   flex-wrap: wrap;
-
 }
-.flex>div{
+.flex > div {
   display: flex;
   flex-direction: column;
   align-items: start;
   width: 25%;
+  gap: 5px;
   cursor: default;
 }
-.flex>div:last-child{
+.flex > div:last-child {
   width: 10%;
 }
 
 .text {
   text-align: center;
 }
-.Footer_nav_link{
+.Footer_nav_link {
   cursor: pointer;
+  text-decoration: none;
+}
+.Footer_nav_link:hover {
+  text-decoration: underline;
 }
