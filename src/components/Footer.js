@@ -36,7 +36,7 @@ function Footer() {
               icon={faUser}
               style={{ color: "#6bbe66", marginRight: "5px" }}
             />
-            <span className="paragraph userList">DJ , charan</span>
+            <span className="paragraph userList">DJ , Charan , Praveen</span>
           </div>
           <div>
             <FontAwesomeIcon

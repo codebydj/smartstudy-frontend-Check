@@ -77,7 +77,7 @@ export default function About() {
           <div className="committee-card">
             <img src="https://i.ibb.co/LDNmw3Cc/User-icon.png" alt="user3" />
             <span>Web Developer & Idea Contributor</span>
-            <div className="UserName">Preveen</div>
+            <div className="UserName">Praveen</div>
             <p className="committee-card-userQualification">
               Computer Science Department
             </p>
