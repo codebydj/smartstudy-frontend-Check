@@ -1,129 +1,177 @@
-// import React, { useState } from "react";
-// import { storage, db } from "../firebase";
-// import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
-// import { collection, addDoc } from "firebase/firestore";
-// import "../styles/uploadForm.css";
-// import upload from "../assets/file-upload.png";
+import { useState } from "react";
+import "../styles/uploadForm.css";
 
-// function UploadForm() {
-//   const [branch, setBranch] = useState("");
-//   const [semester, setSemester] = useState("");
-//   const [subject, setSubject] = useState("");
-//   const [file, setFile] = useState(null);
-//   const [status, setStatus] = useState("");
+function UploadForm() {
+  const [branch, setBranch] = useState("");
+  const [semester, setSemester] = useState("");
+  const [subject, setSubject] = useState("");
+  const [notesName, setNotesName] = useState("");
+  const [link, setLink] = useState("");
+  const [size, setSize] = useState("");
+  const [pages, setPages] = useState("");
 
-//   const handleUpload = async (e) => {
-//     e.preventDefault();
-//     if (!file || !branch || !semester || !subject) {
-//       setStatus("⚠️ Please fill all fields and select a file.");
-//       return;
-//     }
+  // Function to add a new file to localStorage
+  const addFile = (file) => {
+    const existingFiles = JSON.parse(localStorage.getItem("filesData")) || {};
 
-//     try {
-//       setStatus("⏳ Uploading...");
+    if (!existingFiles[file.branch]) {
+      existingFiles[file.branch] = {};
+    }
+    if (!existingFiles[file.branch][file.semester]) {
+      existingFiles[file.branch][file.semester] = {};
+    }
+    if (!existingFiles[file.branch][file.semester][file.subject]) {
+      existingFiles[file.branch][file.semester][file.subject] = [];
+    }
 
-//       // Upload file to Firebase Storage
-//       const storageRef = ref(storage, `uploads/${file.name}`);
-//       await uploadBytes(storageRef, file);
+    existingFiles[file.branch][file.semester][file.subject].push({
+      name: file.notesName,
+      url: file.link,
+      size: file.size,
+      pages: file.pages,
+      date: file.date,
+    });
 
-//       // Get file URL
-//       const fileURL = await getDownloadURL(storageRef);
+    localStorage.setItem("filesData", JSON.stringify(existingFiles));
+  };
 
-//       // Save metadata in Firestore
-//       await addDoc(collection(db, "files"), {
-//         branch,
-//         semester,
-//         subject,
-//         name: file.name,
-//         size: (file.size / (1024 * 1024)).toFixed(2) + " MB",
-//         url: fileURL,
-//         status: "pending",
-//         uploadedAt: new Date(),
-//       });
+  const handleSubmit = (e) => {
+    e.preventDefault();
 
-//       setStatus(
-//         "✅ File uploaded successfully and waiting for Admin approval!"
-//       );
-//       setBranch("");
-//       setSemester("");
-//       setSubject("");
-//       setFile(null);
-//     } catch (error) {
-//       console.error("Upload failed:", error);
-//       setStatus("❌ Upload failed, try again.");
-//     }
-//   };
+    if (
+      !branch ||
+      !semester ||
+      !subject ||
+      !notesName ||
+      !link ||
+      !size ||
+      !pages
+    ) {
+      alert("⚠️ Please fill all fields");
+      return;
+    }
 
-//   return (
-//     <div className="upload-form">
-//       <h2>📤 Upload Study Material</h2>
-//       <form onSubmit={handleUpload} className="upload-form-container">
-//         <div className="DataInputDiv">
-//           <label htmlFor="branch">Branch:</label>
-//           <select
-//             className="input"
-//             type="text"
-//             value={branch}
-//             onChange={(e) => setBranch(e.target.value)}>
-//             <option value="">-- Select Branch --</option>
-//             <option value="CSE">CSE</option>
-//             <option value="ECE">ECE</option>
-//             <option value="EEE">EEE</option>
-//             <option value="MECH">MECH</option>
-//             <option value="CIVIL">CIVIL</option>
-//           </select>
-//         </div>
+    const newFile = {
+      branch,
+      semester,
+      subject,
+      notesName,
+      link,
+      size,
+      pages,
+      date: new Date().toLocaleDateString(),
+    };
+    addFile(newFile);
 
-//         <div className="DataInputDiv">
-//           <label htmlFor="semester">Semester:</label>
-//           <select
-//             className="input"
-//             type="text"
-//             value={semester}
-//             onChange={(e) => setSemester(e.target.value)}>
-//             <option value="">-- Select Semester --</option>
-//             <option value="1-1">1-1</option>
-//             <option value="1-2">1-2</option>
-//             <option value="2-1">2-1</option>
-//             <option value="2-2">2-2</option>
-//             <option value="3-1">3-1</option>
-//             <option value="3-2">3-2</option>
-//             <option value="4-1">4-1</option>
-//           </select>
-//         </div>
+    alert("✅ File added successfully!");
 
-//         <div className="DataInputDiv">
-//           <label htmlFor="subject">Subject:</label>
-//           <input
-//             className="input"
-//             type="text"
-//             placeholder="Subject (e.g., Artificial Intelligence)"
-//             value={subject}
-//             onChange={(e) => setSubject(e.target.value)}
-//           />
-//         </div>
+    // reset form
+    setBranch("");
+    setSemester("");
+    setSubject("");
+    setNotesName("");
+    setLink("");
+    setSize("");
+    setPages("");
+  };
 
-//         <div className="upload-btn-wrapper">
-//           <button className="btn" type="button">
-//             <img src={upload} alt="" className="uploadImg" />
-//             Upload File
-//           </button>
-//           <input
-//             type="file"
-//             onChange={(e) => setFile(e.target.files[0])}
-//             name="myfile"
-//           />
-//         </div>
+  return (
+    <div className="upload-form">
+      <h2>📤 Upload Study Material</h2>
+      <form onSubmit={handleSubmit} className="upload-form-container">
+        <div className="DataInputDiv">
+          <label>Branch:</label>
+          <select
+            className="input"
+            value={branch}
+            onChange={(e) => setBranch(e.target.value)}>
+            <option value="">-- Select Branch --</option>
+            <option value="CSE">CSE</option>
+            <option value="ECE">ECE</option>
+            <option value="EEE">EEE</option>
+            <option value="MECH">MECH</option>
+            <option value="CIVIL">CIVIL</option>
+          </select>
+        </div>
 
-//         {file && <p className="file-name">📄 {file.name}</p>}
+        <div className="DataInputDiv">
+          <label>Semester:</label>
+          <select
+            className="input"
+            value={semester}
+            onChange={(e) => setSemester(e.target.value)}>
+            <option value="">-- Select Semester --</option>
+            <option value="1-1">1-1</option>
+            <option value="1-2">1-2</option>
+            <option value="2-1">2-1</option>
+            <option value="2-2">2-2</option>
+            <option value="3-1">3-1</option>
+            <option value="3-2">3-2</option>
+            <option value="4-1">4-1</option>
+          </select>
+        </div>
 
-//         <button type="submit" className="UploadButton">
-//           <span>Upload</span>
-//         </button>
-//       </form>
-//       <p className="status-msg">{status}</p>
-//     </div>
-//   );
-// }
+        <div className="DataInputDiv">
+          <label>Subject:</label>
+          <input
+            className="input"
+            type="text"
+            placeholder="Subject"
+            value={subject}
+            onChange={(e) => setSubject(e.target.value)}
+          />
+        </div>
 
-// export default UploadForm;
+        <div className="DataInputDiv">
+          <label>Notes Name:</label>
+          <input
+            className="input"
+            type="text"
+            placeholder="Enter notes name"
+            value={notesName}
+            onChange={(e) => setNotesName(e.target.value)}
+          />
+        </div>
+
+        <div className="DataInputDiv">
+          <label>File Link:</label>
+          <input
+            className="input"
+            type="url"
+            placeholder="Paste Google Drive link"
+            value={link}
+            onChange={(e) => setLink(e.target.value)}
+          />
+        </div>
+
+        <div className="DataInputDiv">
+          <label>Size:</label>
+          <input
+            className="input"
+            type="text"
+            placeholder="e.g., 2 MB"
+            value={size}
+            onChange={(e) => setSize(e.target.value)}
+          />
+        </div>
+
+        <div className="DataInputDiv">
+          <label>No. of Pages:</label>
+          <input
+            className="input"
+            type="number"
+            placeholder="e.g., 25"
+            value={pages}
+            onChange={(e) => setPages(e.target.value)}
+          />
+        </div>
+
+        <button type="submit" className="UploadButton">
+          <span>Upload</span>
+        </button>
+      </form>
+    </div>
+  );
+}
+
+export default UploadForm;

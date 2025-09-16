@@ -5,11 +5,20 @@ import "../styles/Login.css";
 import { Link } from "react-router-dom";
 
 export default function Login() {
+  function AuthFunc(e) {
+   
+    e.preventDefault();
+    if(e.target.username.value==="admin@123" && e.target.Password.value==="admin@123"){
+      window.location.href = "/Uploadform"; 
+    } else {
+      alert("Invalid username or password");
+    }
+  }
   return (
     <div className="LoginPage">
       <BackButton className="LoginBackButton"/>
       <div className="LoginContainer">
-        <form action="/" className="LoginFormContainer">
+        <form action={AuthFunc} onSubmit={AuthFunc} className="LoginFormContainer">
           <div className="LoginImgContainer">
             <img src={LoginImg} alt="" className="LoginImg" />
           </div>
@@ -24,6 +33,7 @@ export default function Login() {
                 type="text"
                 placeholder="Enter username"
                 maxLength={15}
+                id="username"
                 required
               />
             </div>
@@ -33,6 +43,7 @@ export default function Login() {
                 type="text"
                 placeholder="Enter password"
                 maxLength={15}
+                id="Password"
                 required
               />
             </div>
