@@ -57,7 +57,7 @@ export default function About() {
               in basic to medium-level programming and passionate about web
               development ideas that bring real value to students.
             </p>
-            <p className="email">dhanunjaya@gamil.com</p>
+            <p className="email">jayad6889@gmail.com</p>
           </div>
           <div className="committee-card">
             <img src="https://i.ibb.co/LDNmw3Cc/User-icon.png" alt="user2" />
@@ -72,7 +72,7 @@ export default function About() {
               project. Dedicated to building useful solutions that help students
               collaborate effectively.
             </p>
-            <p className="email">charan@gmail.com</p>
+            <p className="email">kotacharan1305@gmail.com</p>
           </div>
           <div className="committee-card">
             <img src="https://i.ibb.co/LDNmw3Cc/User-icon.png" alt="user3" />
